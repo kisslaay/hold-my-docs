@@ -6,7 +6,7 @@ import Credentials from "../data/credentials.json";
 export default function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  var userFound = "no";
+  let userFound = false;
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
