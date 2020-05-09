@@ -16,14 +16,14 @@ export default function Login(props) {
     try {
       if (email && password) {
         Credentials.map((credentialData, index) => {
-          if (credentialData.email == email && credentialData.password == password) {
+          if (credentialData.email === email && credentialData.password === password) {
             event.preventDefault();
             userFound = "yes";
             alert("Logged in");
-            return;
           }
+          return null;
         })
-        if (userFound == "no") {
+        if (userFound === "no") {
           alert("Wrong email or password");
         }
       } else {
